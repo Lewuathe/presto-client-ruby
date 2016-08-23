@@ -14,5 +14,5 @@ SimpleCov.start
 require 'json'
 require 'webmock/rspec'
 
-require 'presto-client'
-include Presto::Client
+require 'presto-client-legacy'
+include PrestoLegacy::Client

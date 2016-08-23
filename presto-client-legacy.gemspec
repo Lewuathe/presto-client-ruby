@@ -1,15 +1,15 @@
 require File.expand_path 'lib/presto/client/version', File.dirname(__FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name          = "presto-client"
-  gem.version       = Presto::Client::VERSION
+  gem.name          = "presto-client-legacy"
+  gem.version       = PrestoLegacy::Client::VERSION
 
-  gem.authors       = ["Sadayuki Furuhashi"]
-  gem.email         = ["sf@treasure-data.com"]
-  gem.description   = %q{Presto client library}
-  gem.summary       = %q{Presto client library}
-  gem.homepage      = "https://github.com/treasure-data/presto-client-ruby"
-  gem.license       = "Apache 2.0"
+  gem.authors       = ["Sadayuki Furuhash", "Kai Sasaki"]
+  gem.email         = ["sf@treasure-data.com", "lewuathe@me.com"]
+  gem.description   = %q{Presto client library for legacy presto version}
+  gem.summary       = %q{Presto client library for legacy presto version (before 0.151)}
+  gem.homepage      = "https://github.com/Lewuathe/presto-client-ruby"
+  gem.license       = "Apache-2.0"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
