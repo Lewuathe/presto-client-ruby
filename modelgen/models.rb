@@ -108,11 +108,7 @@ module Presto::Client
           when "unnest"             then UnnestNode
           when "exchange"           then ExchangeNode
           when "union"              then UnionNode
-          when "intersect"          then IntersectNode
           when "scalar"             then EnforceSingleRowNode
-          when "groupid"            then GroupIdNode
-          when "explainAnalyze"     then ExplainAnalyzeNode
-          when "apply"              then ApplyNode
         end
         if model_class
            node = model_class.decode(hash)
@@ -205,34 +201,21 @@ module Presto::Client
       end
     end
 
-    # Inner classes 
-    class << Specification =
-        Base.new(:partition_by, :order_by, :orderings, :frame, :pages_added)
-      def decode(hash)
-        unless hash.is_a?(Hash)
-          raise TypeError, "Can't convert #{hash.class} to Hash"
-        end
-        obj = allocate
-        obj.send(:initialize_struct,
-          hash["partitionBy"],
-          hash["orderBy"],
-          hash["orderings"],
-          hash["frame"],
-        )
-        obj
-      end
-    end
 
-    class << ArgumentBinding =
-        Base.new(:column, :constant)
+    # A missing JsonCreator in Presto
+    class << PageBufferInfo =
+        Base.new(:partition, :buffered_pages, :queued_pages, :buffered_bytes, :pages_added)
       def decode(hash)
         unless hash.is_a?(Hash)
           raise TypeError, "Can't convert #{hash.class} to Hash"
         end
         obj = allocate
         obj.send(:initialize_struct,
-          hash["column"],
-          hash["constant"]
+          hash["partition"],
+          hash["bufferedPages"],
+          hash["queuedPages"],
+          hash["bufferedBytes"],
+          hash["pagesAdded"],
         )
         obj
       end
