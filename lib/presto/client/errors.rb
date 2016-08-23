@@ -13,7 +13,7 @@
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
 #
-module Presto::Client
+module PrestoLegacy::Client
   class PrestoError < StandardError
   end
 

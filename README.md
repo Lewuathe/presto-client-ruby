@@ -1,4 +1,4 @@
-# Presto client library for Ruby
+# Presto client library for Ruby which support legacy presto (before 0.151)
 
 [![Build Status](https://travis-ci.org/treasure-data/presto-client-ruby.svg?branch=master)](https://travis-ci.org/treasure-data/presto-client-ruby)
 
@@ -84,4 +84,3 @@ end
 * **http_timeout** sets timeout in seconds to read data from a server.
 
 See [RDoc](http://www.rubydoc.info/gems/presto-client/) for the full documentation.
-

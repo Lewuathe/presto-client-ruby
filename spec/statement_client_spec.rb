@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Presto::Client::StatementClient do
+describe PrestoLegacy::Client::StatementClient do
   let :options do
     {
       server: "localhost",
@@ -181,4 +181,3 @@ describe Presto::Client::StatementClient do
     end
   end
 end
-
