@@ -16,8 +16,8 @@
 module PrestoLegacy
   module Client
 
-    require 'presto/client/version'
-    require 'presto/client/client'
+    require 'presto_legacy/client/version'
+    require 'presto_legacy/client/client'
 
   end
 end

@@ -20,7 +20,6 @@ task :modelgen do
     sh "tar zxvf presto-#{GEN_MODELS_VERSION}.tar.gz"
   end
 
-  sh "#{RbConfig.ruby} modelgen/modelgen.rb presto-#{GEN_MODELS_VERSION} modelgen/models.rb lib/presto/client/models.rb"
-  puts "Generated lib/presto/client/models.rb."
+  sh "#{RbConfig.ruby} modelgen/modelgen.rb presto-#{GEN_MODELS_VERSION} modelgen/models.rb lib/presto_legacy/client/models.rb"
+  puts "Generated lib/presto_legacy/client/models.rb."
 end
-

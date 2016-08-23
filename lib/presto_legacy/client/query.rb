@@ -16,9 +16,9 @@
 module PrestoLegacy::Client
 
   require 'faraday'
-  require 'presto/client/models'
-  require 'presto/client/errors'
-  require 'presto/client/statement_client'
+  require 'presto_legacy/client/models'
+  require 'presto_legacy/client/errors'
+  require 'presto_legacy/client/statement_client'
 
   class Query
     def self.start(query, options)

@@ -1,1 +1,1 @@
-require 'presto/client'
+require 'presto_legacy/client'

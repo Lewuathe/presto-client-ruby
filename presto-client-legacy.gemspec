@@ -1,4 +1,4 @@
-require File.expand_path 'lib/presto/client/version', File.dirname(__FILE__)
+require File.expand_path 'lib/presto_legacy/client/version', File.dirname(__FILE__)
 
 Gem::Specification.new do |gem|
   gem.name          = "presto-client-legacy"

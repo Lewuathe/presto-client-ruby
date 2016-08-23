@@ -16,8 +16,8 @@
 module PrestoLegacy::Client
 
   require 'multi_json'
-  require 'presto/client/models'
-  require 'presto/client/errors'
+  require 'presto_legacy/client/models'
+  require 'presto_legacy/client/errors'
 
   module PrestoHeaders
     PRESTO_USER = "X-Presto-User"

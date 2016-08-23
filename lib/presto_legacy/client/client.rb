@@ -15,8 +15,8 @@
 #
 module PrestoLegacy::Client
 
-  require 'presto/client/models'
-  require 'presto/client/query'
+  require 'presto_legacy/client/models'
+  require 'presto_legacy/client/query'
 
   class Client
     def initialize(options)
